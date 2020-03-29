@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+	font-family: "Work Sans";
+	background-color: #EDEFEF;
+}
+
+div {
+	display: block;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+button {
+	cursor: pointer;
+	font-family: "Work Sans";
+	outline: 0;
+	border: 0;
+	border-radius: 5px;
+	padding: 10px 20px;
+	background-color: #FFC849;
+	transition: background-color 0.3s ease;
+	margin: 15px 0;
+	margin-top: auto;
+}
+
+button:hover {
+	background-color: white;
+}
+
+.big-btn {
+	font-size: 18px;
+}
+
+.bigger-btn {
+	font-size: 30px;
+	font-weight: 600;
+	margin-top: 5%;
+}
+
+section {
+	background-color: #EDEFEF;
+	display: block;
+	padding-top: 30px;
+	padding-left: 10vw;
+	padding-right: 10vw;
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+section h1 {
+	text-align: center;
+}
+
+.jumbotron {
+	display: block;
+	margin-top: 5vh;
+	height: 100%;
+	text-align: center;
+}
+
+.jumbotron .img {
+	display: inline-block;
+	width: 80vw;
+	max-width: 500px;
+}
+
+.jumbotron .img img {
+	text-align: center;
+	width: 100%;
+}
+
+.jumbotron .text h2 {
+	font-size: 40px;
+	font-weight: 400;
+}
+
+.jumbotron .text subtitle {
+	padding-top: 15px;
+	font-size: 25px;
+	color: gray;
+}
+
+@media all and (max-width: 400px) {
+	h1 {
+		font-size: 40px;
+	}
+
+	.jumbotron .text h2 {
+		font-size: 30px;
+	}
+	.jumpotron .text subtitle {
+		font-size: 15px;
+	}
+}
+
+/* SECTION SPECIFIC */
+
+#home {
+	text-align: center;
+}
+
+#courses {
+	background-color: #222428;
+}
+
+#courses h1 {
+	color: #EDEFEF;
+}
