@@ -2,7 +2,7 @@ function renderMe(user) {
     $("#log").text("Hello, " + user.displayName + ".");
 
     let url = user.photoURL;
-    if (!url){
+    if (!url) {
         console.log("Falling back to defualt url")
         url = "https://www.searchpng.com/wp-content/uploads/2019/02/Men-Profile-Image-715x657.png";
     }
@@ -116,13 +116,41 @@ if (nameChange) {
 
         const newName = nameChange["newname-field"].value;
 
+        if (newName != "") {
+            auth.currentUser.updateProfile({
+                displayName: newName
+            }).then(function() {
+                console.log("Name changed success!");
+                renderMe(auth.currentUser)
+                window.location.href = "#home";
+                nameChange.reset();
+            }).catch(function(error) {
+                $("#namechange-log").text(error.message);
+            })
+        } else {
+            nameChange.reset();
+        }
+    });
+}
+
+const pfpChange = document.querySelector("#pfp-change");
+if (pfpChange) {
+    pfpChange.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let newUrl = pfpChange["photourl-field"].value;
+        if (newUrl == "") {
+            newUrl = "https://www.searchpng.com/wp-content/uploads/2019/02/Men-Profile-Image-715x657.png";
+        }
+
         auth.currentUser.updateProfile({
-            displayName: newName
-        }).then(() => {
-            console.log("Name changed success!");
-            window.locaiton.href = "#home";
+            photoURL: newUrl
+        }).then(function() {
+            console.log("Photo changed success!");
+            renderMe(auth.currentUser)
+            window.location.href = "#home";
         }).catch(function(error) {
-            $("#namechange-log").text(error.message);
+            $("#photochange-log").text(error.message);
         })
-    }
+    });
 }
