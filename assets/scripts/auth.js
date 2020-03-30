@@ -121,8 +121,8 @@ if (nameChange) {
         }).then(() => {
             console.log("Name changed success!");
             window.locaiton.href = "#home";
-        }).catch({
-            
+        }).catch(function(error) {
+            $("#namechange-log").text(error.message);
         })
     }
 }
