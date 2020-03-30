@@ -121,14 +121,12 @@ if (nameChange) {
                 displayName: newName
             }).then(function() {
                 console.log("Name changed success!");
-                renderMe(auth.currentUser)
-                window.location.href = "#home";
+                renderMe(auth.currentUser);
                 nameChange.reset();
+                window.location.href = "#home";
             }).catch(function(error) {
                 $("#namechange-log").text(error.message);
             })
-        } else {
-            nameChange.reset();
         }
     });
 }
@@ -147,7 +145,8 @@ if (pfpChange) {
             photoURL: newUrl
         }).then(function() {
             console.log("Photo changed success!");
-            renderMe(auth.currentUser)
+            renderMe(auth.currentUser);
+            pfpChange.reset();
             window.location.href = "#home";
         }).catch(function(error) {
             $("#photochange-log").text(error.message);
