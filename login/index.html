@@ -1,4 +1,3 @@
-<!-- This is the beginning -->
 <!doctype html>
 <html lang="en">
 	<head>
@@ -14,19 +13,21 @@
 		<!-- Animation -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css" integrity="sha256-hpX1/GTWVZP5djpbKNFLw048+AIxfh/60hJafI/t+v4=" crossorigin="anonymous" />
 		<!-- MAIN -->
-		<link rel="stylesheet" href="assets/styles/normalize.css" />
-		<link rel="stylesheet" href="assets/styles/menu.css" />
-		<link rel="stylesheet" href="assets/styles/main.css" />
+		<link rel="stylesheet" href="../assets/styles/normalize.css" />
+		<link rel="stylesheet" href="../assets/styles/menu.css" />
+		<link rel="stylesheet" href="../assets/styles/main.css" />
+		<link rel="stylesheet" href="../assets/styles/inputs.css" />
 		<!-- SCRIPTS -->
 		<script src="https://kit.fontawesome.com/fd15234bac.js" crossorigin="anonymous" defer></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js" integrity="sha256-3R+azxOxLxidpHXg8jx8UFdnhZq2IKrGNpZJdAk8KB0=" crossorigin="anonymous"></script>
-		<script src="assets/scripts/navbar.js" defer></script>
-		<script src="assets/scripts/scroll.js" defer></script>
+		<script src="../assets/scripts/navbar.js" defer></script>
+		<script src="../assets/scripts/scroll.js" defer></script>
 		<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js" defer></script>
 		<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js" defer></script>
 		<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js" defer></script>
 		<script src="../assets/scripts/auth.js" defer></script>
+		<script src="../assets/scripts/inputs.js" defer></script>
 		<title>Big Brain | Free Courses for High Schoolers</title>
 	</head>
 	<body>
@@ -37,37 +38,40 @@
 				<span></span>
 				<span></span>
 				<ul id="menu">
-					<a href="#home"><li>Home</li></a>
-					<a href="#courses"><li>Courses</li></a>
-					<a href="#about"><li>About Us</li></a>
-					<a href="login"><li><button id="nav-btn" class="big-btn">Login</button></li></a>
+					<a href="../#home"><li>Home</li></a>
+					<a href="../#courses"><li>Courses</li></a>
+					<a href="../#about"><li>About Us</li></a>
+					<a href="/"><li><button id="login-btn" class="big-btn">Home</button></li></a>
 				</ul>
 			</div>
 		</nav>
-		<section id="home">
-			<a href="/"><h1 data-aos="fade-down">BigBrain</h1></a>
+		<section class="dark" id="home">
+			<h1 data-aos="fade-down">BigBrain Account</h1>
 			<div data-aos="zoom-in" class="jumbotron">
-				<div class="img">
-					<img src="assets/images/learning.png">
-				</div>
 				<div class="text">
-					<h2>Free quality courses.
-					<br>Expand your knowledge.</h2>
-					<subtitle>Learn cybersecurity, math concepts, and more!</subtitle>
+					<h2>Create Your Account</h2>
+					<subtitle id="log">Access to all courses, save progress, and more!</subtitle>
 				</div>
-				<div data-aos-once="true" data-aos-delay=1000 data-aos="fade-up">
-					<a href="#courses"><button class="bigger-btn">Explore</button></a>
-				</div>
+				<form id="login-form">
+					<span class="input input--isao">
+						<input required autocomplete="off" class="input__field input__field--isao" type="email" id="email" />
+						<label class="input__label input__label--isao" data-content="typing email...">
+							<span class="input__label-content input__label-content--isao">email</span>
+						</label>
+					</span>
+					<span class="input input--isao">
+						<input required class="input__field input__field--isao" type="password" id="pswd" />
+						<label class="input__label input__label--isao" data-content="typing pswd...">
+							<span class="input__label-content input__label-content--isao">password</span>
+						</label>
+					</span>
+					<button type="submit" class="bigger-btn">Log-In</button>
+					<a href="/signup"><p>I need an account</p></a>
+				</form>
 			</div>
 		</section>
-		<section class="dark" id="courses">
-			<h1 data-aos="fade-down">Courses</h1>
-		</section>
-		<section id="about">
-			<h1 data-aos="fade-down">About Us</h1>
-		</section>
 	</body>
-	<script type="text/javascript">
+	<script>
 		AOS.init({
 			duration: 1000,
 			easing: "easeInOutQuint",
