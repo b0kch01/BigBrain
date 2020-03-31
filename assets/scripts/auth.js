@@ -89,6 +89,7 @@ if (signupForm) {
                     displayName: name
                 }).catch(function(error) {
                     $("#log").text(error.message);
+                    alert(error);
                 })
             })
             .catch(function(error) {
