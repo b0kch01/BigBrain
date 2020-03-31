@@ -38,7 +38,7 @@
 				<span></span>
 				<span></span>
 				<ul id="menu">
-					<a href="#home"><li>Home</li></a>
+					<a href="#home"><li>Profile</li></a>
 					<a href="#my-courses"><li>My Courses</li></a>
 					<a href="#settings"><li>Settings</li></a>
 					<a href="#"><li><button id="logout" class="big-btn">Logout</button></li></a>
@@ -57,11 +57,23 @@
 		</section>
 		<section id="my-courses">
 			<h1 data-aos="fade-down">My Courses</h1>
+			<cards>
+				<card data-aos="zoom-in-up">
+					<h1>Math Basics 101</h1>
+					<h2>Learn basic arithmetic and wow your friends! This is a beta/test/template course. You will only see formatting and test scenarios.</h2>
+					<a href="/learn/math-basics"><button class="bigger-btn">Learn</button></a>
+				</card>
+				<card data-aos="zoom-in-up">
+					<h1>Cybersecurity Basics 201</h1>
+					<h2>Learn basic arithmetic and wow your friends! This is a beta/test/template course. You will only see formatting and test scenarios.</h2>
+					<button disabled class="bigger-btn">Not Ready</button>
+				</card>
+			</cards>
 		</section>
 		<section class="dark" id="settings">
 			<h1 data-aos="fade-down">Settings</h1>
 			<cards>
-				<card data-aos="flip-down">
+				<card data-aos="zoom-in-up">
 					<h1>Username</h1>
 					<h2 id="namechange-log">Change your username.</h2>
 					<form id="name-change">
@@ -74,7 +86,7 @@
 						<button class="icon-btn"><i class="fa fa-xs fa-check"></i></button>
 					</form>
 				</card>
-				<card data-aos="flip-down">
+				<card data-aos="zoom-in-up">
 					<h1>Photo</h1>
 					<h2 id="photochange-log">Change your profile picture.</h2>
 					<form id="pfp-change">
@@ -94,7 +106,8 @@
 		AOS.init({
 			duration: 1000,
 			easing: "easeInOutQuint",
-			anchorPlacement: "top-bottom"
+			anchorPlacement: "top-bottom",
+			mirror: false
 		});
 	</script>
 </html>
