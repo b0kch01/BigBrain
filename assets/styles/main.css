@@ -148,7 +148,7 @@ section h1 {
 
 /* SECTION SPECIFIC */
 
-#home {
+#home, #courses .text {
 	text-align: center;
 }
 
@@ -169,6 +169,7 @@ cards {
 	justify-content: center;
 	align-items: center;
 	flex-grow: 1;
+	flex-wrap: wrap;
 }
 
 card {
@@ -177,10 +178,11 @@ card {
 	justify-content: space-between;
 	align-items: flex-start;
 	max-width: 500px;
-	max-height: 300px;
+	height: 250px;
 	background-color: #2f3237;
 	border-radius: 25px 25px;
 	margin: 18px;
+	flex-basis: 50%;
 }
 
 card h1 {

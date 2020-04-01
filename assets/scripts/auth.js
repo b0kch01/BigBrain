@@ -34,7 +34,7 @@ auth.onAuthStateChanged(function(user) {
     if (user) {
         if (document.getElementById("me")) {
             renderMe(user);
-        } else if (document.getElementById("login-form") || document.getElementById("signup-form")) {
+        } else if (document.getElementById("login-form")) {
             window.location.href = "../me";
         } else {
             // Navbutton is become "me"
@@ -43,7 +43,7 @@ auth.onAuthStateChanged(function(user) {
         }
     } else {
         // If no user is logged in
-        if (document.getElementById("me")) {
+        if (document.getElementById("me") || document.getElementById("app-config")) {
             window.location.href = "/login";
         }
     }
@@ -87,6 +87,8 @@ if (signupForm) {
             .then(function() {
                 auth.currentUser.updateProfile({
                     displayName: name
+                }).then(function() {
+                    window.location.href = "/me";
                 }).catch(function(error) {
                     $("#log").text(error.message);
                     alert(error);

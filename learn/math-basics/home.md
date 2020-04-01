@@ -4,10 +4,7 @@ The **Basic Math 101** course teaches you to create your own course on BigBrain.
 
 *I'm sorry if that was too loud...*
 
-<div>
-	<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?&autoplay=1&controls=1&rel=0"></iframe>
-</div>
-
+[intro video](https://youtube.com/embed/dQw4w9WgXcQ?&autoplay=1&controls=0 ':include :type=iframe')
 
 **Here is some filler text below:**
 

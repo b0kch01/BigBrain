@@ -1,62 +1,75 @@
 # Basic Math
 *Free* Learning courses for all. Aimed towards high schoolers. 
 
-<div>
-<iframe src="https://www.youtube.com/embed/enMumwvLAug" frameborder="0" allowfullscreen="true"></iframe>
-</div>
+[youtube](http://www.youtube.com/embed/dQw4w9WgXcQ ':include :type=iframe')
 
-## Coding with Math
-### Javascript
 
-There are many ways you can use this.
-It's actually quite intresting.
+## Coding
+### Formatting
 
-No need to actually develop too many things.
-
-```js
-const helloText = "Hello~";
-const number = 123;
-
-async function hello() {
-	console.log(helloText);
-	return true;
-}
-````
-
-## Coding with Math+
-
-### More JS Functions
-
-There are many ways you can use this.
-It's actually quite intresting.
+There are **many** ways you can put code into this lesson!
+It's actually quite *intresting*.
 
 No need to actually develop too many things.
 
-```js
-const helloText = "Hello~";
-const number = 123;
+```java
+import java.util.Scanner;
 
-async function hello() {
-	console.log(helloText);
-	return true;
+Scanner sc = new Scanner(System.in);
+
+for (int i = 0; i < list.length; i++) {
+    System.out.print("\nEnter something for index " + i + ": ");
+	list[i] = sc.nextLine();
 }
-````
+```
 
-## Headline 3
 
-### Subtitle
 
-There are many ways you can use this.
-It's actually quite intresting.
+## Math Equations
+### Formatting
 
-No need to actually develop too many things.
+Yes, you can also have complex equation formatting here! Honestly, you can do so much.
 
-```js
-const helloText = "Hello~";
-const number = 123;
+Just make a line of `$` to start typing your equation!
+Typing `$$` will center it.
 
-async function hello() {
-	console.log(helloText);
-	return true;
-}
-````
+**Recommended: go to [Symbolab](https://symbolab.com) and build you equation, copy and paste it into here!**
+
+### Examples
+
+<!-- tabs:start -->
+
+#### **Basics**
+
+| Formatted        | What you write      |
+| :--------------- | ------------------- |
+| $$\sqrt{33}$$    | ```\sqrt{33}```     |
+| $$\frac{42}{3}$$ | ```\frac{42}/{3}``` |
+
+#### **Centered**
+```
+$$
+f(x) = \int_{-\infty}^\infty
+    \hat f\xi\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
+```
+
+$$
+f(x) = \int_{-\infty}^\infty
+    \hat f\xi\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
+
+#### **Embed**
+```
+$
+x_{roots}=\frac{-b\pm\sqrt{b^2-4ac}}/{2a}
+$
+```
+
+$
+x_{roots}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+$
+
+<!-- tabs:end -->
